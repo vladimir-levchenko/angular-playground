@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {Hero} from '../hero';
 import {HEROES} from '../mock-heroes';
+import {HeroService} from '../hero.service';
 
 @Component({
   selector: 'app-heroes',
@@ -12,14 +13,49 @@ export class HeroesComponent implements OnInit {
     id: 1,
     name: 'Windstorm'
   };
-  heroes = HEROES;
+  heroes: Hero[];
   selectedHero: Hero;
 
-  constructor() {}
+  constructor(private heroService: HeroService) {}
 
-  ngOnInit() {}
+  getHeroes(): void {
+    this.heroService.getHeroes().subscribe(heroes => (this.heroes = heroes));
+  }
+
+  ngOnInit() {
+    console.log('ngOnInit');
+    this.getHeroes();
+  }
 
   onSelect(hero: Hero) {
     this.selectedHero = hero;
   }
+
+  // ngOnChanges(changeRecord) {
+  //   console.log('ngOnChanges');
+  // }
+
+  // ngDoCheck() {
+  //   console.log('ngDoCheck');
+  // }
+
+  // ngAfterContentInit() {
+  //   'ngAfterContentInit';
+  // }
+
+  // ngAfterContentChecked() {
+  //   'ngAfterContentChecked';
+  // }
+
+  // ngAfterViewInit() {
+  //   'ngAfterViewInit';
+  // }
+
+  // ngAfterViewChecked() {
+  //   'ngAfterViewChecked';
+  // }
+
+  // ngOnDestroy() {
+  //   'ngOnDestroy';
+  // }
 }
