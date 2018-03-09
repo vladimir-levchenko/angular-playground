@@ -15,10 +15,14 @@
     <input #heroName />
   </label>
 
-  <!-- 
+  <!--
     (click) passes input to add() and then clears the input
   -->
   <button (click)="add(heroName.value); heroName.value=''">
     add
   </button>
+
+  <div>
+    Update from fork1
+  </div>
 </div>
