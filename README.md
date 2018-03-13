@@ -6,6 +6,7 @@
 4.  Update from testing-fork2
 5.  Update from feature-branch-1
 6.  Another update from feature-branch-1
+7.  Feature-2 update
 
 # Angular-Test
 
