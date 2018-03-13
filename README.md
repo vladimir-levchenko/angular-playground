@@ -7,7 +7,7 @@
 5.  Update from feature-branch-1
 6.  Another update from feature-branch-1
 7.  Feature-2 update
-8.  Feature-3 update
+8.  Feature-3 update!
 
 # Angular-Test
 
