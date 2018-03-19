@@ -55,3 +55,17 @@ git push
 git checkout TOPIC-BRANCH
 git rebase master
 ```
+
+## remote: Invalid username or password
+
+```
+git remote show origin
+```
+
+# show branches
+
+```
+git branch
+git branch -vv
+git branch -vva
+```
